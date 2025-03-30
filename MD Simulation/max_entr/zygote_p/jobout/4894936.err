@@ -1,0 +1,196 @@
+awk: fatal: cannot open file `file' for reading (No such file or directory)
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                 Good ROcking Metal Altar for Chronical Sinners
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                              :-)  trjcat_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f       traj.xtc  Input, Mult. Trajectory: xtc trr trj gro g96 pdb cpt
+  -o    trajout.xtc  Output, Mult. Trajectory: xtc trr trj gro g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+-demux     remd.xvg  Input, Opt.  xvgr/xmgr file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-b           time   -1      First time to use (ps)
+-e           time   -1      Last time to use (ps)
+-dt          time   0       Only write frame when t MOD dt = first time (ps)
+-prec        int    3       Precision for .xtc and .gro writing in number of
+                            decimal places
+-[no]vel     bool   yes     Read and write velocities if possible
+-[no]settime bool   no      Change starting time interactively
+-[no]sort    bool   yes     Sort trajectory files (not frames)
+-[no]keeplast  bool no      Keep overlapping frames at end of trajectory
+-[no]overwrite bool no      Overwrite overlapping frames during appending
+-[no]cat     bool   yes     Do not discard double time frames
+
+
+-------------------------------------------------------
+Program trjcat_mpi, VERSION 4.5.7
+Source code file: gmxfio.c, line: 519
+
+Can not open file:
+traj.xtc
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+
+"Carry Me Away" (Motors)
+
+rm: cannot remove 'tmp?.xtc': No such file or directory
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                Guyana Rwanda Oman Macau Angola Cameroon Senegal
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                             :-)  trjconv_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f    trajout.xtc  Input        Trajectory: xtc trr trj gro g96 pdb cpt
+  -o        tmp.pdb  Output       Trajectory: xtc trr trj gro g96 pdb
+  -s /hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p/TOP_ME/Polymer_1005_0.4.pdb 
+                                   Input, Opt!  Structure+mass(db): tpr tpb
+                                   tpa gro g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+ -fr     frames.ndx  Input, Opt.  Index file
+-sub    cluster.ndx  Input, Opt.  Index file
+-drop      drop.xvg  Input, Opt.  xvgr/xmgr file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-b           time   0       First frame (ps) to read from trajectory
+-e           time   0       Last frame (ps) to read from trajectory
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-[no]w       bool   no      View output .xvg, .xpm, .eps and .pdb files
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-skip        int    1       Only write every nr-th frame
+-dt          time   0       Only write frame when t MOD dt = first time (ps)
+-[no]round   bool   no      Round measurements to nearest picosecond
+-dump        time   -1      Dump frame nearest specified time (ps)
+-t0          time   0       Starting time (ps) (default: don't change)
+-timestep    time   0       Change time step between input frames (ps)
+-pbc         enum   none    PBC treatment (see help text for full
+                            description): none, mol, res, atom, nojump,
+                            cluster or whole
+-ur          enum   rect    Unit-cell representation: rect, tric or compact
+-[no]center  bool   no      Center atoms in box
+-boxcenter   enum   tric    Center for -pbc and -center: tric, rect or zero
+-box         vector 0 0 0   Size for new cubic box (default: read from input)
+-clustercenter vector 0 0 0   Optional starting point for pbc cluster option
+-trans       vector 0 0 0   All coordinates will be translated by trans. This
+                            can advantageously be combined with -pbc mol -ur
+                            compact.
+-shift       vector 0 0 0   All coordinates will be shifted by framenr*shift
+-fit         enum   none    Fit molecule to ref structure in the structure
+                            file: none, rot+trans, rotxy+transxy,
+                            translation, transxy or progressive
+-ndec        int    3       Precision for .xtc and .gro writing in number of
+                            decimal places
+-[no]vel     bool   yes     Read and write velocities if possible
+-[no]force   bool   no      Read and write forces if possible
+-trunc       time   -1      Truncate input trajectory file after this time
+                            (ps)
+-exec        string         Execute command for every output frame with the
+                            frame number as argument
+-[no]app     bool   no      Append output
+-split       time   0       Start writing new file when t MOD split = first
+                            time (ps)
+-[no]sep     bool   no      Write each frame to a separate .gro, .g96 or .pdb
+                            file
+-nzero       int    0       If the -sep flag is set, use these many digits
+                            for the file numbers and prepend zeros as needed
+-dropunder   real   0       Drop all frames below this value
+-dropover    real   0       Drop all frames above this value
+-[no]conect  bool   no      Add conect records when writing .pdb files.
+                            Useful for visualization of non-standard
+                            molecules, e.g. coarse grained ones
+
+Will write pdb: Protein data bank file
+Group     0 (         System) has  1005 elements
+Group     1 (        Protein) has  1005 elements
+Group     2 (      Protein-H) has  1005 elements
+Group     3 (        C-alpha) has  1005 elements
+Group     4 (       Backbone) has  1005 elements
+Group     5 (      MainChain) has  1005 elements
+Group     6 (   MainChain+Cb) has  1005 elements
+Group     7 (    MainChain+H) has  1005 elements
+Group     8 (      SideChain) has     0 elements
+Group     9 (    SideChain-H) has     0 elements
+Select a group: 
+-------------------------------------------------------
+Program trjconv_mpi, VERSION 4.5.7
+Source code file: gmxfio.c, line: 519
+
+Can not open file:
+trajout.xtc
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+
+"In the End Science Comes Down to Praying" (P. v.d. Berg)
+
+At line 69 of file fcal.f90 (unit = 1)
+Fortran runtime error: Cannot open file 'tmp.pdb': No such file or directory
+
+Error termination. Backtrace:
+#0  0x7f55157e4d4a
+#1  0x7f55157e5859
+#2  0x7f55157e653f
+#3  0x7f5515a259c6
+#4  0x7f5515a25cbc
+#5  0x5615d5edd6a3
+#6  0x5615d5edeb79
+#7  0x7f55154a7082
+#8  0x5615d5edc1fd
+#9  0xffffffffffffffff
+rm: cannot remove 'tmp.pdb': No such file or directory

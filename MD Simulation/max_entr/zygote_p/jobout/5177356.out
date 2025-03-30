@@ -1,0 +1,80 @@
+Read 1005 atoms
+Volume: 69733 nm^3, corresponds to roughly 31379800 electrons
+No velocities found
+    system size :  7.780  7.290  6.100 (nm)
+    diameter    :  8.063               (nm)
+    center      : 20.915 20.839 21.755 (nm)
+    box vectors : 41.160 41.160 41.160 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  :69733.01               (nm^3)
+    shift       :-16.799-16.723-17.639 (nm)
+new center      :  4.116  4.116  4.116 (nm)
+new box vectors :  8.232  8.232  8.232 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 557.86               (nm^3)
+Select group for output
+Selected 0: 'System'
+Read 1005 atoms
+Volume: 69733 nm^3, corresponds to roughly 31379800 electrons
+No velocities found
+    system size :  6.550  7.200  7.510 (nm)
+    diameter    :  8.203               (nm)
+    center      : 19.978 21.202 19.835 (nm)
+    box vectors : 41.160 41.160 41.160 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  :69733.01               (nm^3)
+    shift       :-15.862-17.086-15.719 (nm)
+new center      :  4.116  4.116  4.116 (nm)
+new box vectors :  8.232  8.232  8.232 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 557.86               (nm^3)
+Select group for output
+Selected 0: 'System'
+Read 1005 atoms
+Volume: 69733 nm^3, corresponds to roughly 31379800 electrons
+No velocities found
+    system size :  6.620  6.550  7.990 (nm)
+    diameter    :  8.025               (nm)
+    center      : 20.239 22.224 20.890 (nm)
+    box vectors : 41.160 41.160 41.160 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  :69733.01               (nm^3)
+    shift       :-16.123-18.108-16.774 (nm)
+new center      :  4.116  4.116  4.116 (nm)
+new box vectors :  8.232  8.232  8.232 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 557.86               (nm^3)
+Select group for output
+Selected 0: 'System'
+Read 1005 atoms
+Volume: 69733 nm^3, corresponds to roughly 31379800 electrons
+No velocities found
+    system size :  6.210  7.900  7.620 (nm)
+    diameter    :  8.157               (nm)
+    center      : 21.555 20.279 20.662 (nm)
+    box vectors : 41.160 41.160 41.160 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  :69733.01               (nm^3)
+    shift       :-17.439-16.163-16.546 (nm)
+new center      :  4.116  4.116  4.116 (nm)
+new box vectors :  8.232  8.232  8.232 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 557.86               (nm^3)
+Select group for output
+Selected 0: 'System'
+Read 1005 atoms
+Volume: 69733 nm^3, corresponds to roughly 31379800 electrons
+No velocities found
+    system size :  6.360  6.690  7.350 (nm)
+    diameter    :  8.149               (nm)
+    center      : 21.870 19.734 20.712 (nm)
+    box vectors : 41.160 41.160 41.160 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  :69733.01               (nm^3)
+    shift       :-17.754-15.618-16.596 (nm)
+new center      :  4.116  4.116  4.116 (nm)
+new box vectors :  8.232  8.232  8.232 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 557.86               (nm^3)
+Select group for output
+Selected 0: 'System'

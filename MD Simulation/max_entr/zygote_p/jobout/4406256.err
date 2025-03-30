@@ -1,0 +1,176 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+            Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                              :-)  trjcat_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f       tmp0.xtc  Input, Mult. Trajectory: xtc trr trj gro g96 pdb cpt
+  -o    trajout.xtc  Output, Mult. Trajectory: xtc trr trj gro g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+-demux     remd.xvg  Input, Opt.  xvgr/xmgr file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-b           time   -1      First time to use (ps)
+-e           time   -1      Last time to use (ps)
+-dt          time   0       Only write frame when t MOD dt = first time (ps)
+-prec        int    3       Precision for .xtc and .gro writing in number of
+                            decimal places
+-[no]vel     bool   yes     Read and write velocities if possible
+-[no]settime bool   no      Change starting time interactively
+-[no]sort    bool   yes     Sort trajectory files (not frames)
+-[no]keeplast  bool no      Keep overlapping frames at end of trajectory
+-[no]overwrite bool no      Overwrite overlapping frames during appending
+-[no]cat     bool   yes     Do not discard double time frames
+
+Reading frame       0 time 1000.000   Reading frame       1 time 1001.000   
+
+Summary of files and start times used:
+
+          File                Start time       Time step
+---------------------------------------------------------
+                 tmp0.xtc     1000.000 ps        1.000 ps
+
+Reading frame       0 time 1000.000   
+Continue writing frames from tmp0.xtc t=1000 ps, frame=0      
+ ->  frame      0 time 1000.000 ps     Reading frame       1 time 1001.000    ->  frame      1 time 1001.000 ps     Reading frame       2 time 1002.000    ->  frame      2 time 1002.000 ps     Reading frame       3 time 1003.000    ->  frame      3 time 1003.000 ps     Reading frame       4 time 1004.000    ->  frame      4 time 1004.000 ps     Reading frame       5 time 1005.000    ->  frame      5 time 1005.000 ps     Reading frame       6 time 1006.000    ->  frame      6 time 1006.000 ps     Reading frame       7 time 1007.000    ->  frame      7 time 1007.000 ps     Reading frame       8 time 1008.000    ->  frame      8 time 1008.000 ps     Reading frame       9 time 1009.000    ->  frame      9 time 1009.000 ps     Reading frame      10 time 1010.000    ->  frame     10 time 1010.000 ps     Reading frame      11 time 1011.000   Reading frame      12 time 1012.000   Reading frame      13 time 1013.000   Reading frame      14 time 1014.000   Reading frame      15 time 1015.000   Reading frame      16 time 1016.000   Reading frame      17 time 1017.000   Reading frame      18 time 1018.000   Reading frame      19 time 1019.000   Reading frame      20 time 1020.000    ->  frame     20 time 1020.000 ps     Reading frame      30 time 1030.000    ->  frame     30 time 1030.000 ps     Reading frame      40 time 1040.000    ->  frame     40 time 1040.000 ps     Reading frame      50 time 1050.000    ->  frame     50 time 1050.000 ps     Reading frame      60 time 1060.000    ->  frame     60 time 1060.000 ps     Reading frame      70 time 1070.000    ->  frame     70 time 1070.000 ps     Reading frame      80 time 1080.000    ->  frame     80 time 1080.000 ps     Reading frame      90 time 1090.000    ->  frame     90 time 1090.000 ps     Reading frame     100 time 1100.000    ->  frame    100 time 1100.000 ps     Reading frame     110 time 1110.000    ->  frame    110 time 1110.000 ps     Reading frame     120 time 1120.000    ->  frame    120 time 1120.000 ps     Reading frame     130 time 1130.000    ->  frame    130 time 1130.000 ps     Reading frame     140 time 1140.000    ->  frame    140 time 1140.000 ps     Reading frame     150 time 1150.000    ->  frame    150 time 1150.000 ps     Reading frame     160 time 1160.000    ->  frame    160 time 1160.000 ps     Reading frame     170 time 1170.000    ->  frame    170 time 1170.000 ps     Reading frame     180 time 1180.000    ->  frame    180 time 1180.000 ps     Reading frame     190 time 1190.000    ->  frame    190 time 1190.000 ps     Reading frame     200 time 1200.000    ->  frame    200 time 1200.000 ps      ->  frame    210 time 1210.000 ps      ->  frame    220 time 1220.000 ps      ->  frame    230 time 1230.000 ps      ->  frame    240 time 1240.000 ps      ->  frame    250 time 1250.000 ps      ->  frame    260 time 1260.000 ps      ->  frame    270 time 1270.000 ps      ->  frame    280 time 1280.000 ps      ->  frame    290 time 1290.000 ps     Reading frame     300 time 1300.000    ->  frame    300 time 1300.000 ps      ->  frame    310 time 1310.000 ps      ->  frame    320 time 1320.000 ps      ->  frame    330 time 1330.000 ps      ->  frame    340 time 1340.000 ps      ->  frame    350 time 1350.000 ps      ->  frame    360 time 1360.000 ps      ->  frame    370 time 1370.000 ps      ->  frame    380 time 1380.000 ps      ->  frame    390 time 1390.000 ps     Reading frame     400 time 1400.000    ->  frame    400 time 1400.000 ps      ->  frame    410 time 1410.000 ps      ->  frame    420 time 1420.000 ps      ->  frame    430 time 1430.000 ps      ->  frame    440 time 1440.000 ps      ->  frame    450 time 1450.000 ps      ->  frame    460 time 1460.000 ps      ->  frame    470 time 1470.000 ps      ->  frame    480 time 1480.000 ps      ->  frame    490 time 1490.000 ps     Reading frame     500 time 1500.000    ->  frame    500 time 1500.000 ps      ->  frame    510 time 1510.000 ps      ->  frame    520 time 1520.000 ps      ->  frame    530 time 1530.000 ps      ->  frame    540 time 1540.000 ps      ->  frame    550 time 1550.000 ps      ->  frame    560 time 1560.000 ps      ->  frame    570 time 1570.000 ps      ->  frame    580 time 1580.000 ps      ->  frame    590 time 1590.000 ps     Reading frame     600 time 1600.000    ->  frame    600 time 1600.000 ps      ->  frame    610 time 1610.000 ps      ->  frame    620 time 1620.000 ps      ->  frame    630 time 1630.000 ps      ->  frame    640 time 1640.000 ps      ->  frame    650 time 1650.000 ps      ->  frame    660 time 1660.000 ps      ->  frame    670 time 1670.000 ps      ->  frame    680 time 1680.000 ps      ->  frame    690 time 1690.000 ps     Reading frame     700 time 1700.000    ->  frame    700 time 1700.000 ps      ->  frame    710 time 1710.000 ps      ->  frame    720 time 1720.000 ps      ->  frame    730 time 1730.000 ps      ->  frame    740 time 1740.000 ps      ->  frame    750 time 1750.000 ps      ->  frame    760 time 1760.000 ps      ->  frame    770 time 1770.000 ps      ->  frame    780 time 1780.000 ps      ->  frame    790 time 1790.000 ps     Reading frame     800 time 1800.000    ->  frame    800 time 1800.000 ps      ->  frame    810 time 1810.000 ps      ->  frame    820 time 1820.000 ps      ->  frame    830 time 1830.000 ps      ->  frame    840 time 1840.000 ps      ->  frame    850 time 1850.000 ps      ->  frame    860 time 1860.000 ps      ->  frame    870 time 1870.000 ps      ->  frame    880 time 1880.000 ps      ->  frame    890 time 1890.000 ps     Reading frame     900 time 1900.000    ->  frame    900 time 1900.000 ps      ->  frame    910 time 1910.000 ps      ->  frame    920 time 1920.000 ps      ->  frame    930 time 1930.000 ps      ->  frame    940 time 1940.000 ps      ->  frame    950 time 1950.000 ps      ->  frame    960 time 1960.000 ps      ->  frame    970 time 1970.000 ps      ->  frame    980 time 1980.000 ps      ->  frame    990 time 1990.000 ps     Reading frame    1000 time 2000.000    ->  frame   1000 time 2000.000 ps      ->  frame   1010 time 2010.000 ps      ->  frame   1020 time 2020.000 ps      ->  frame   1030 time 2030.000 ps      ->  frame   1040 time 2040.000 ps      ->  frame   1050 time 2050.000 ps      ->  frame   1060 time 2060.000 ps      ->  frame   1070 time 2070.000 ps      ->  frame   1080 time 2080.000 ps      ->  frame   1090 time 2090.000 ps     Reading frame    1100 time 2100.000    ->  frame   1100 time 2100.000 ps      ->  frame   1110 time 2110.000 ps      ->  frame   1120 time 2120.000 ps      ->  frame   1130 time 2130.000 ps      ->  frame   1140 time 2140.000 ps      ->  frame   1150 time 2150.000 ps      ->  frame   1160 time 2160.000 ps      ->  frame   1170 time 2170.000 ps      ->  frame   1180 time 2180.000 ps      ->  frame   1190 time 2190.000 ps     Reading frame    1200 time 2200.000    ->  frame   1200 time 2200.000 ps      ->  frame   1210 time 2210.000 ps      ->  frame   1220 time 2220.000 ps      ->  frame   1230 time 2230.000 ps      ->  frame   1240 time 2240.000 ps      ->  frame   1250 time 2250.000 ps      ->  frame   1260 time 2260.000 ps      ->  frame   1270 time 2270.000 ps      ->  frame   1280 time 2280.000 ps      ->  frame   1290 time 2290.000 ps     Reading frame    1300 time 2300.000    ->  frame   1300 time 2300.000 ps      ->  frame   1310 time 2310.000 ps      ->  frame   1320 time 2320.000 ps      ->  frame   1330 time 2330.000 ps      ->  frame   1340 time 2340.000 ps      ->  frame   1350 time 2350.000 ps      ->  frame   1360 time 2360.000 ps      ->  frame   1370 time 2370.000 ps      ->  frame   1380 time 2380.000 ps      ->  frame   1390 time 2390.000 ps     Reading frame    1400 time 2400.000    ->  frame   1400 time 2400.000 ps      ->  frame   1410 time 2410.000 ps      ->  frame   1420 time 2420.000 ps      ->  frame   1430 time 2430.000 ps      ->  frame   1440 time 2440.000 ps      ->  frame   1450 time 2450.000 ps      ->  frame   1460 time 2460.000 ps      ->  frame   1470 time 2470.000 ps      ->  frame   1480 time 2480.000 ps      ->  frame   1490 time 2490.000 ps     Reading frame    1500 time 2500.000    ->  frame   1500 time 2500.000 ps     Last frame       1500 time 2500.000   
+
+Last frame written was 1500, time 2500.000000 ps
+
+gcq#283: "'Nay. We are but men.' Rock!" (Tenacious D)
+
+                         :-)  G  R  O  M  A  C  S  (-:
+
+            Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                             :-)  trjconv_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f    trajout.xtc  Input        Trajectory: xtc trr trj gro g96 pdb cpt
+  -o        tmp.pdb  Output       Trajectory: xtc trr trj gro g96 pdb
+  -s /hpc2hdd/home/chu-amat/cbfengphy/zygote_p/TOP_ME/Polymer_1005_0.4.pdb 
+                                   Input, Opt!  Structure+mass(db): tpr tpb
+                                   tpa gro g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+ -fr     frames.ndx  Input, Opt.  Index file
+-sub    cluster.ndx  Input, Opt.  Index file
+-drop      drop.xvg  Input, Opt.  xvgr/xmgr file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-b           time   0       First frame (ps) to read from trajectory
+-e           time   0       Last frame (ps) to read from trajectory
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-[no]w       bool   no      View output .xvg, .xpm, .eps and .pdb files
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-skip        int    1       Only write every nr-th frame
+-dt          time   0       Only write frame when t MOD dt = first time (ps)
+-[no]round   bool   no      Round measurements to nearest picosecond
+-dump        time   -1      Dump frame nearest specified time (ps)
+-t0          time   0       Starting time (ps) (default: don't change)
+-timestep    time   0       Change time step between input frames (ps)
+-pbc         enum   none    PBC treatment (see help text for full
+                            description): none, mol, res, atom, nojump,
+                            cluster or whole
+-ur          enum   rect    Unit-cell representation: rect, tric or compact
+-[no]center  bool   no      Center atoms in box
+-boxcenter   enum   tric    Center for -pbc and -center: tric, rect or zero
+-box         vector 0 0 0   Size for new cubic box (default: read from input)
+-clustercenter vector 0 0 0   Optional starting point for pbc cluster option
+-trans       vector 0 0 0   All coordinates will be translated by trans. This
+                            can advantageously be combined with -pbc mol -ur
+                            compact.
+-shift       vector 0 0 0   All coordinates will be shifted by framenr*shift
+-fit         enum   none    Fit molecule to ref structure in the structure
+                            file: none, rot+trans, rotxy+transxy,
+                            translation, transxy or progressive
+-ndec        int    3       Precision for .xtc and .gro writing in number of
+                            decimal places
+-[no]vel     bool   yes     Read and write velocities if possible
+-[no]force   bool   no      Read and write forces if possible
+-trunc       time   -1      Truncate input trajectory file after this time
+                            (ps)
+-exec        string         Execute command for every output frame with the
+                            frame number as argument
+-[no]app     bool   no      Append output
+-split       time   0       Start writing new file when t MOD split = first
+                            time (ps)
+-[no]sep     bool   no      Write each frame to a separate .gro, .g96 or .pdb
+                            file
+-nzero       int    0       If the -sep flag is set, use these many digits
+                            for the file numbers and prepend zeros as needed
+-dropunder   real   0       Drop all frames below this value
+-dropover    real   0       Drop all frames above this value
+-[no]conect  bool   no      Add conect records when writing .pdb files.
+                            Useful for visualization of non-standard
+                            molecules, e.g. coarse grained ones
+
+Will write pdb: Protein data bank file
+Group     0 (         System) has  1005 elements
+Group     1 (        Protein) has  1005 elements
+Group     2 (      Protein-H) has  1005 elements
+Group     3 (        C-alpha) has  1005 elements
+Group     4 (       Backbone) has  1005 elements
+Group     5 (      MainChain) has  1005 elements
+Group     6 (   MainChain+Cb) has  1005 elements
+Group     7 (    MainChain+H) has  1005 elements
+Group     8 (      SideChain) has     0 elements
+Group     9 (    SideChain-H) has     0 elements
+Select a group: Reading frame       0 time 1000.000   
+Precision of trajout.xtc is 0.001 (nm)
+ ->  frame      0 time 1000.000      Reading frame       1 time 1001.000    ->  frame      1 time 1001.000      Reading frame       2 time 1002.000    ->  frame      2 time 1002.000      Reading frame       3 time 1003.000    ->  frame      3 time 1003.000      Reading frame       4 time 1004.000    ->  frame      4 time 1004.000      Reading frame       5 time 1005.000    ->  frame      5 time 1005.000      Reading frame       6 time 1006.000    ->  frame      6 time 1006.000      Reading frame       7 time 1007.000    ->  frame      7 time 1007.000      Reading frame       8 time 1008.000    ->  frame      8 time 1008.000      Reading frame       9 time 1009.000    ->  frame      9 time 1009.000      Reading frame      10 time 1010.000    ->  frame     10 time 1010.000      Reading frame      11 time 1011.000   Reading frame      12 time 1012.000   Reading frame      13 time 1013.000   Reading frame      14 time 1014.000   Reading frame      15 time 1015.000   Reading frame      16 time 1016.000   Reading frame      17 time 1017.000   Reading frame      18 time 1018.000   Reading frame      19 time 1019.000   Reading frame      20 time 1020.000    ->  frame     20 time 1020.000      Reading frame      30 time 1030.000    ->  frame     30 time 1030.000      Reading frame      40 time 1040.000    ->  frame     40 time 1040.000      Reading frame      50 time 1050.000    ->  frame     50 time 1050.000      Reading frame      60 time 1060.000    ->  frame     60 time 1060.000      Reading frame      70 time 1070.000    ->  frame     70 time 1070.000      Reading frame      80 time 1080.000    ->  frame     80 time 1080.000      Reading frame      90 time 1090.000    ->  frame     90 time 1090.000      Reading frame     100 time 1100.000    ->  frame    100 time 1100.000      Reading frame     110 time 1110.000    ->  frame    110 time 1110.000      Reading frame     120 time 1120.000    ->  frame    120 time 1120.000      Reading frame     130 time 1130.000    ->  frame    130 time 1130.000      Reading frame     140 time 1140.000    ->  frame    140 time 1140.000      Reading frame     150 time 1150.000    ->  frame    150 time 1150.000      Reading frame     160 time 1160.000    ->  frame    160 time 1160.000      Reading frame     170 time 1170.000    ->  frame    170 time 1170.000      Reading frame     180 time 1180.000    ->  frame    180 time 1180.000      Reading frame     190 time 1190.000    ->  frame    190 time 1190.000      Reading frame     200 time 1200.000    ->  frame    200 time 1200.000       ->  frame    210 time 1210.000       ->  frame    220 time 1220.000       ->  frame    230 time 1230.000       ->  frame    240 time 1240.000       ->  frame    250 time 1250.000       ->  frame    260 time 1260.000       ->  frame    270 time 1270.000       ->  frame    280 time 1280.000       ->  frame    290 time 1290.000      Reading frame     300 time 1300.000    ->  frame    300 time 1300.000       ->  frame    310 time 1310.000       ->  frame    320 time 1320.000       ->  frame    330 time 1330.000       ->  frame    340 time 1340.000       ->  frame    350 time 1350.000       ->  frame    360 time 1360.000       ->  frame    370 time 1370.000       ->  frame    380 time 1380.000       ->  frame    390 time 1390.000      Reading frame     400 time 1400.000    ->  frame    400 time 1400.000       ->  frame    410 time 1410.000       ->  frame    420 time 1420.000       ->  frame    430 time 1430.000       ->  frame    440 time 1440.000       ->  frame    450 time 1450.000       ->  frame    460 time 1460.000       ->  frame    470 time 1470.000       ->  frame    480 time 1480.000       ->  frame    490 time 1490.000      Reading frame     500 time 1500.000    ->  frame    500 time 1500.000       ->  frame    510 time 1510.000       ->  frame    520 time 1520.000       ->  frame    530 time 1530.000       ->  frame    540 time 1540.000       ->  frame    550 time 1550.000       ->  frame    560 time 1560.000       ->  frame    570 time 1570.000       ->  frame    580 time 1580.000       ->  frame    590 time 1590.000      Reading frame     600 time 1600.000    ->  frame    600 time 1600.000       ->  frame    610 time 1610.000       ->  frame    620 time 1620.000       ->  frame    630 time 1630.000       ->  frame    640 time 1640.000       ->  frame    650 time 1650.000       ->  frame    660 time 1660.000       ->  frame    670 time 1670.000       ->  frame    680 time 1680.000       ->  frame    690 time 1690.000      Reading frame     700 time 1700.000    ->  frame    700 time 1700.000       ->  frame    710 time 1710.000       ->  frame    720 time 1720.000       ->  frame    730 time 1730.000       ->  frame    740 time 1740.000       ->  frame    750 time 1750.000       ->  frame    760 time 1760.000       ->  frame    770 time 1770.000       ->  frame    780 time 1780.000       ->  frame    790 time 1790.000      Reading frame     800 time 1800.000    ->  frame    800 time 1800.000       ->  frame    810 time 1810.000       ->  frame    820 time 1820.000       ->  frame    830 time 1830.000       ->  frame    840 time 1840.000       ->  frame    850 time 1850.000       ->  frame    860 time 1860.000       ->  frame    870 time 1870.000       ->  frame    880 time 1880.000       ->  frame    890 time 1890.000      Reading frame     900 time 1900.000    ->  frame    900 time 1900.000       ->  frame    910 time 1910.000       ->  frame    920 time 1920.000       ->  frame    930 time 1930.000       ->  frame    940 time 1940.000       ->  frame    950 time 1950.000       ->  frame    960 time 1960.000       ->  frame    970 time 1970.000       ->  frame    980 time 1980.000       ->  frame    990 time 1990.000      Reading frame    1000 time 2000.000    ->  frame   1000 time 2000.000       ->  frame   1010 time 2010.000       ->  frame   1020 time 2020.000       ->  frame   1030 time 2030.000       ->  frame   1040 time 2040.000       ->  frame   1050 time 2050.000       ->  frame   1060 time 2060.000       ->  frame   1070 time 2070.000       ->  frame   1080 time 2080.000       ->  frame   1090 time 2090.000      Reading frame    1100 time 2100.000    ->  frame   1100 time 2100.000       ->  frame   1110 time 2110.000       ->  frame   1120 time 2120.000       ->  frame   1130 time 2130.000       ->  frame   1140 time 2140.000       ->  frame   1150 time 2150.000       ->  frame   1160 time 2160.000       ->  frame   1170 time 2170.000       ->  frame   1180 time 2180.000       ->  frame   1190 time 2190.000      Reading frame    1200 time 2200.000    ->  frame   1200 time 2200.000       ->  frame   1210 time 2210.000       ->  frame   1220 time 2220.000       ->  frame   1230 time 2230.000       ->  frame   1240 time 2240.000       ->  frame   1250 time 2250.000       ->  frame   1260 time 2260.000       ->  frame   1270 time 2270.000       ->  frame   1280 time 2280.000       ->  frame   1290 time 2290.000      Reading frame    1300 time 2300.000    ->  frame   1300 time 2300.000       ->  frame   1310 time 2310.000       ->  frame   1320 time 2320.000       ->  frame   1330 time 2330.000       ->  frame   1340 time 2340.000       ->  frame   1350 time 2350.000       ->  frame   1360 time 2360.000       ->  frame   1370 time 2370.000       ->  frame   1380 time 2380.000       ->  frame   1390 time 2390.000      Reading frame    1400 time 2400.000    ->  frame   1400 time 2400.000       ->  frame   1410 time 2410.000       ->  frame   1420 time 2420.000       ->  frame   1430 time 2430.000       ->  frame   1440 time 2440.000       ->  frame   1450 time 2450.000       ->  frame   1460 time 2460.000       ->  frame   1470 time 2470.000       ->  frame   1480 time 2480.000       ->  frame   1490 time 2490.000      Reading frame    1500 time 2500.000    ->  frame   1500 time 2500.000      Last frame       1500 time 2500.000   
+
+
+gcq#262: "Why Do *You* Use Constraints ?" (H.J.C. Berendsen)
+
