@@ -1,0 +1,45 @@
+# Simulation of chromosome
+
+units           lj
+boundary        f  f  f
+
+atom_style      full
+bond_style      harmonic
+angle_style     cosine
+read_data       ./input/em_0.data
+special_bonds   lj 0.0 0.0 1.0
+
+bond_coeff      * 200 1.0
+angle_coeff     1 2.0
+
+pair_style      softpol/list 2.2 ./i19/restraint_38.txt 0.0
+pair_coeff      * * 4.0 1.0 24.0 1.8
+
+neighbor        5.0 bin
+neigh_modify    delay 1 every 1
+
+thermo          50000
+thermo_style    custom step temp pe etotal epair ebond eangle
+timestep        0.01
+
+# Spherical confinement
+region          nucleus sphere 0.0 0.0 0.0 30.0 side in units box
+fix             wall all wall/region nucleus lj126 1.0 1.0 1.12
+
+fix             10 all nve
+fix             20 all balance 1000 1.1 shift xyz 10 1.01
+
+# High temperature
+velocity        all create 3.0 82027 rot yes dist gaussian
+fix             30 all langevin 3.0 1.0 2.0 82027
+run             1000000
+
+# Normal temperature Equilibration
+unfix           30
+fix             40 all langevin 1.0 1.0 2.0 82027
+run             1000000
+
+# Sampling
+reset_timestep  0
+dump            1 all dcd 800 ./i19/iter_38_0.dcd
+run             8000000

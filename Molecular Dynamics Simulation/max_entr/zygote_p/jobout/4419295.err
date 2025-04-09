@@ -1,0 +1,455 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+               Gromacs Runs One Microsecond At Cannonball Speeds
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+      :-)  /hpc2hdd/home/chu-amat/opt/gromacs-4.5.7/bin/editconf_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f /hpc2hdd/home/chu-amat/cbfengphy/zygote_p/PDB/N145.gro  Input       
+                                   Structure file: gro g96 pdb tpr etc.
+  -n      index.ndx  Input, Opt.  Index file
+  -o N145_center.gro  Output, Opt! Structure file: gro g96 pdb etc.
+-mead      mead.pqr  Output, Opt. Coordinate file for MEAD
+ -bf      bfact.dat  Input, Opt.  Generic data file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    0       Set the nicelevel
+-[no]w       bool   no      View output .xvg, .xpm, .eps and .pdb files
+-[no]ndef    bool   no      Choose output from default index groups
+-bt          enum   cubic   Box type for -box and -d: triclinic, cubic,
+                            dodecahedron or octahedron
+-box         vector 8.23208 8.23208 8.23208  Box vector lengths (a,b,c)
+-angles      vector 90 90 90  Angles between the box vectors (bc,ac,ab)
+-d           real   0       Distance between the solute and the box
+-[no]c       bool   yes     Center molecule in box (implied by -box and -d)
+-center      vector 0 0 0   Coordinates of geometrical center
+-aligncenter vector 0 0 0   Center of rotation for alignment
+-align       vector 0 0 0   Align to target vector
+-translate   vector 0 0 0   Translation
+-rotate      vector 0 0 0   Rotation around the X, Y and Z axes in degrees
+-[no]princ   bool   no      Orient molecule(s) along their principal axes
+-scale       vector 1 1 1   Scaling factor
+-density     real   1000    Density (g/L) of the output box achieved by
+                            scaling
+-[no]pbc     bool   no      Remove the periodicity (make molecule whole again)
+-resnr       int    -1       Renumber residues starting from resnr
+-[no]grasp   bool   no      Store the charge of the atom in the B-factor
+                            field and the radius of the atom in the occupancy
+                            field
+-rvdw        real   0.12    Default Van der Waals radius (in nm) if one can
+                            not be found in the database or if no parameters
+                            are present in the topology file
+-[no]sig56   bool   no      Use rmin/2 (minimum in the Van der Waals
+                            potential) rather than sigma/2 
+-[no]vdwread bool   no      Read the Van der Waals radii from the file
+                            vdwradii.dat rather than computing the radii
+                            based on the force field
+-[no]atom    bool   no      Force B-factor attachment per atom
+-[no]legend  bool   no      Make B-factor legend
+-label       string A       Add chain label for all residues
+-[no]conect  bool   no      Add CONECT records to a .pdb file when written.
+                            Can only be done when a topology is present
+
+
+gcq#348: "If There Is No Guitar In The House, You Know It's Owner Can Not Be Trusted" (Gogol Bordello)
+
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   cpu1-70
+  Local device: mlx5_2
+--------------------------------------------------------------------------
+NNODES=4, MYRANK=1, HOSTNAME=cpu1-70
+NNODES=4, MYRANK=2, HOSTNAME=cpu1-70
+NNODES=4, MYRANK=0, HOSTNAME=cpu1-70
+NODEID=0 argc=13
+NODEID=2 argc=13
+NODEID=1 argc=13
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                          GROtesk MACabre and Sinister
+
+NNODES=4, MYRANK=3, HOSTNAME=cpu1-70
+                            :-)  VERSION 4.5.7  (-:
+
+NODEID=3 argc=13
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+        :-)  /hpc2hdd/home/chu-amat/opt/gromacs-4.5.7/bin/mdrun_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -s         em.tpr  Input        Run input file: tpr tpb tpa
+  -o         em.trr  Output       Full precision trajectory: trr trj cpt
+  -x         em.xtc  Output, Opt. Compressed trajectory (portable xdr format)
+-cpi         em.cpt  Input, Opt.  Checkpoint file
+-cpo         em.cpt  Output, Opt. Checkpoint file
+  -c         em.gro  Output       Structure file: gro g96 pdb etc.
+  -e         em.edr  Output       Energy file
+  -g         em.log  Output       Log file
+-dhdl        em.xvg  Output, Opt. xvgr/xmgr file
+-field       em.xvg  Output, Opt. xvgr/xmgr file
+-tablehpc2hdd/home/chu-amat/cbfengphy/zygote_p/Tables/table_PM.xvg  Input,
+                                   Opt!  xvgr/xmgr file
+-tableppc2hdd/home/chu-amat/cbfengphy/zygote_p/Tables/table_ME.xvg  Input,
+                                   Opt!  xvgr/xmgr file
+-tablebpc2hdd/home/chu-amat/cbfengphy/zygote_p/Tables/table.xvg  Input, Opt! 
+                                   xvgr/xmgr file
+-rerun       em.xtc  Input, Opt.  Trajectory: xtc trr trj gro g96 pdb cpt
+-tpi         em.xvg  Output, Opt. xvgr/xmgr file
+-tpid        em.xvg  Output, Opt. xvgr/xmgr file
+ -ei         em.edi  Input, Opt.  ED sampling input
+ -eo         em.edo  Output, Opt. ED sampling output
+  -j         em.gct  Input, Opt.  General coupling stuff
+ -jo         em.gct  Output, Opt. General coupling stuff
+-ffout       em.xvg  Output, Opt. xvgr/xmgr file
+-devout      em.xvg  Output, Opt. xvgr/xmgr file
+-runav       em.xvg  Output, Opt. xvgr/xmgr file
+ -px         em.xvg  Output, Opt. xvgr/xmgr file
+ -pf         em.xvg  Output, Opt. xvgr/xmgr file
+-mtx         em.mtx  Output, Opt. Hessian matrix
+ -dn         em.ndx  Output, Opt. Index file
+-plumedpc2hdd/home/chu-amat/cbfengphy/zygote_p/plumed_SR.dat  Input, Opt! 
+                                   Generic data file
+-multidir        em  Input, Opt., Mult. Run directory
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    0       Set the nicelevel
+-deffnm      string em      Set the default filename for all file options
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-[no]pd      bool   yes     Use particle decompostion
+-dd          vector 0 0 0   Domain decomposition grid, 0 is optimize
+-npme        int    -1      Number of separate nodes to be used for PME, -1
+                            is guess
+-ddorder     enum   interleave  DD node order: interleave, pp_pme or cartesian
+-[no]ddcheck bool   no      Check for all bonded interactions with DD
+-rdd         real   0       The maximum distance for bonded interactions with
+                            DD (nm), 0 is determine from initial coordinates
+-rcon        real   0       Maximum distance for P-LINCS (nm), 0 is estimate
+-dlb         enum   auto    Dynamic load balancing (with DD): auto, no or yes
+-dds         real   0.8     Minimum allowed dlb scaling of the DD cell size
+-gcom        int    -1      Global communication frequency
+-[no]v       bool   no      Be loud and noisy
+-[no]compact bool   yes     Write a compact log file
+-[no]seppot  bool   no      Write separate V and dVdl terms for each
+                            interaction type and node to the log file(s)
+-pforce      real   -1      Print all forces larger than this (kJ/mol nm)
+-[no]reprod  bool   no      Try to avoid optimizations that affect binary
+                            reproducibility
+-cpt         real   15      Checkpoint interval (minutes)
+-[no]cpnum   bool   no      Keep and number checkpoint files
+-[no]append  bool   yes     Append to previous output files when continuing
+                            from checkpoint instead of adding the simulation
+                            part number to all file names
+-maxh        real   -1      Terminate after 0.99 times this time (hours)
+-multi       int    0       Do multiple simulations in parallel
+-replex      int    0       Attempt replica exchange periodically with this
+                            period (steps)
+-reseed      int    -1      Seed for replica exchange, -1 is generate a seed
+-[no]ionize  bool   no      Do a simulation including the effect of an X-Ray
+                            bombardment on your system
+
+Reading file em.tpr, VERSION 4.5.7 (single precision)
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+01
+   Number of steps    =         2000
+
+Reached the maximum number of steps before reaching Fmax < 10
+
+writing lowest energy coordinates.
+
+Steepest Descents did not converge to Fmax < 10 in 2001 steps.
+Potential Energy  =  2.7786262e+04
+Maximum force     =  3.1617093e+02 on atom 785
+Norm of force     =  7.4108170e+01
+
+gcq#194: "Don't Eat That Yellow Snow" (F. Zappa)
+
+[cpu1-70:838105] 3 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[cpu1-70:838105] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   cpu1-70
+  Local device: mlx5_2
+--------------------------------------------------------------------------
+NNODES=4, MYRANK=3, HOSTNAME=cpu1-70
+NNODES=4, MYRANK=2, HOSTNAME=cpu1-70
+NNODES=4, MYRANK=1, HOSTNAME=cpu1-70
+NNODES=4, MYRANK=0, HOSTNAME=cpu1-70
+NODEID=0 argc=13
+NODEID=2 argc=13
+NODEID=1 argc=13
+NODEID=3 argc=13
+                         :-)  G  R  O  M  A  C  S  (-:
+
+           Glycine aRginine prOline Methionine Alanine Cystine Serine
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+        :-)  /hpc2hdd/home/chu-amat/opt/gromacs-4.5.7/bin/mdrun_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -s         md.tpr  Input        Run input file: tpr tpb tpa
+  -o       traj.trr  Output       Full precision trajectory: trr trj cpt
+  -x       traj.xtc  Output, Opt. Compressed trajectory (portable xdr format)
+-cpi      state.cpt  Input, Opt.  Checkpoint file
+-cpo      state.cpt  Output, Opt. Checkpoint file
+  -c    confout.gro  Output       Structure file: gro g96 pdb etc.
+  -e       ener.edr  Output       Energy file
+  -g         md.log  Output       Log file
+-dhdl      dhdl.xvg  Output, Opt. xvgr/xmgr file
+-field    field.xvg  Output, Opt. xvgr/xmgr file
+-tablehpc2hdd/home/chu-amat/cbfengphy/zygote_p/Tables/table_PM.xvg  Input,
+                                   Opt!  xvgr/xmgr file
+-tableppc2hdd/home/chu-amat/cbfengphy/zygote_p/Tables/table_ME.xvg  Input,
+                                   Opt!  xvgr/xmgr file
+-tablebpc2hdd/home/chu-amat/cbfengphy/zygote_p/Tables/table.xvg  Input, Opt! 
+                                   xvgr/xmgr file
+-rerun    rerun.xtc  Input, Opt.  Trajectory: xtc trr trj gro g96 pdb cpt
+-tpi        tpi.xvg  Output, Opt. xvgr/xmgr file
+-tpid   tpidist.xvg  Output, Opt. xvgr/xmgr file
+ -ei        sam.edi  Input, Opt.  ED sampling input
+ -eo        sam.edo  Output, Opt. ED sampling output
+  -j       wham.gct  Input, Opt.  General coupling stuff
+ -jo        bam.gct  Output, Opt. General coupling stuff
+-ffout      gct.xvg  Output, Opt. xvgr/xmgr file
+-devout   deviatie.xvg  Output, Opt. xvgr/xmgr file
+-runav  runaver.xvg  Output, Opt. xvgr/xmgr file
+ -px      pullx.xvg  Output, Opt. xvgr/xmgr file
+ -pf      pullf.xvg  Output, Opt. xvgr/xmgr file
+-mtx         nm.mtx  Output, Opt. Hessian matrix
+ -dn     dipole.ndx  Output, Opt. Index file
+-plumedpc2hdd/home/chu-amat/cbfengphy/zygote_p/plumed_SR.dat  Input, Opt! 
+                                   Generic data file
+-multidir    rundir  Input, Opt., Mult. Run directory
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    0       Set the nicelevel
+-deffnm      string         Set the default filename for all file options
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-[no]pd      bool   yes     Use particle decompostion
+-dd          vector 0 0 0   Domain decomposition grid, 0 is optimize
+-npme        int    -1      Number of separate nodes to be used for PME, -1
+                            is guess
+-ddorder     enum   interleave  DD node order: interleave, pp_pme or cartesian
+-[no]ddcheck bool   no      Check for all bonded interactions with DD
+-rdd         real   0       The maximum distance for bonded interactions with
+                            DD (nm), 0 is determine from initial coordinates
+-rcon        real   0       Maximum distance for P-LINCS (nm), 0 is estimate
+-dlb         enum   auto    Dynamic load balancing (with DD): auto, no or yes
+-dds         real   0.8     Minimum allowed dlb scaling of the DD cell size
+-gcom        int    -1      Global communication frequency
+-[no]v       bool   no      Be loud and noisy
+-[no]compact bool   yes     Write a compact log file
+-[no]seppot  bool   no      Write separate V and dVdl terms for each
+                            interaction type and node to the log file(s)
+-pforce      real   -1      Print all forces larger than this (kJ/mol nm)
+-[no]reprod  bool   no      Try to avoid optimizations that affect binary
+                            reproducibility
+-cpt         real   15      Checkpoint interval (minutes)
+-[no]cpnum   bool   no      Keep and number checkpoint files
+-[no]append  bool   yes     Append to previous output files when continuing
+                            from checkpoint instead of adding the simulation
+                            part number to all file names
+-maxh        real   -1      Terminate after 0.99 times this time (hours)
+-multi       int    0       Do multiple simulations in parallel
+-replex      int    0       Attempt replica exchange periodically with this
+                            period (steps)
+-reseed      int    -1      Seed for replica exchange, -1 is generate a seed
+-[no]ionize  bool   no      Do a simulation including the effect of an X-Ray
+                            bombardment on your system
+
+Reading file md.tpr, VERSION 4.5.7 (single precision)
+starting mdrun 'Protein'
+5000000 steps,   2500.0 ps.
+[cpu1-70:838290] 3 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[cpu1-70:838290] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+
+Writing final coordinates.
+
+	Parallel run - timing based on wallclock.
+
+               NODE (s)   Real (s)      (%)
+       Time:   4669.987   4669.987    100.0
+                       1h17:49
+               (Mnbf/s)   (GFlops)   (ns/day)  (hour/ns)
+Performance:    141.598      9.490     46.253      0.519
+
+gcq#103: "Take Your Medications and Preparations and Ram It Up Your Snout" (F. Zappa)
+
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                          GROtesk MACabre and Sinister
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+       :-)  /hpc2hdd/home/chu-amat/opt/gromacs-4.5.7/bin/trjconv_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f       traj.xtc  Input        Trajectory: xtc trr trj gro g96 pdb cpt
+  -o    ../tmp0.xtc  Output       Trajectory: xtc trr trj gro g96 pdb
+  -s         md.tpr  Input, Opt!  Structure+mass(db): tpr tpb tpa gro g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+ -fr     frames.ndx  Input, Opt.  Index file
+-sub    cluster.ndx  Input, Opt.  Index file
+-drop      drop.xvg  Input, Opt.  xvgr/xmgr file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-b           time   1000    First frame (ps) to read from trajectory
+-e           time   0       Last frame (ps) to read from trajectory
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-[no]w       bool   no      View output .xvg, .xpm, .eps and .pdb files
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-skip        int    1       Only write every nr-th frame
+-dt          time   0       Only write frame when t MOD dt = first time (ps)
+-[no]round   bool   no      Round measurements to nearest picosecond
+-dump        time   -1      Dump frame nearest specified time (ps)
+-t0          time   0       Starting time (ps) (default: don't change)
+-timestep    time   0       Change time step between input frames (ps)
+-pbc         enum   none    PBC treatment (see help text for full
+                            description): none, mol, res, atom, nojump,
+                            cluster or whole
+-ur          enum   rect    Unit-cell representation: rect, tric or compact
+-[no]center  bool   no      Center atoms in box
+-boxcenter   enum   tric    Center for -pbc and -center: tric, rect or zero
+-box         vector 0 0 0   Size for new cubic box (default: read from input)
+-clustercenter vector 0 0 0   Optional starting point for pbc cluster option
+-trans       vector 0 0 0   All coordinates will be translated by trans. This
+                            can advantageously be combined with -pbc mol -ur
+                            compact.
+-shift       vector 0 0 0   All coordinates will be shifted by framenr*shift
+-fit         enum   none    Fit molecule to ref structure in the structure
+                            file: none, rot+trans, rotxy+transxy,
+                            translation, transxy or progressive
+-ndec        int    3       Precision for .xtc and .gro writing in number of
+                            decimal places
+-[no]vel     bool   yes     Read and write velocities if possible
+-[no]force   bool   no      Read and write forces if possible
+-trunc       time   -1      Truncate input trajectory file after this time
+                            (ps)
+-exec        string         Execute command for every output frame with the
+                            frame number as argument
+-[no]app     bool   no      Append output
+-split       time   0       Start writing new file when t MOD split = first
+                            time (ps)
+-[no]sep     bool   no      Write each frame to a separate .gro, .g96 or .pdb
+                            file
+-nzero       int    0       If the -sep flag is set, use these many digits
+                            for the file numbers and prepend zeros as needed
+-dropunder   real   0       Drop all frames below this value
+-dropover    real   0       Drop all frames above this value
+-[no]conect  bool   no      Add conect records when writing .pdb files.
+                            Useful for visualization of non-standard
+                            molecules, e.g. coarse grained ones
+
+Will write xtc: Compressed trajectory (portable xdr format)
+Reading file md.tpr, VERSION 4.5.7 (single precision)
+Reading file md.tpr, VERSION 4.5.7 (single precision)
+Group     0 (         System) has  1005 elements
+Group     1 (        Protein) has  1005 elements
+Group     2 (      Protein-H) has  1005 elements
+Group     3 (        C-alpha) has  1005 elements
+Group     4 (       Backbone) has  1005 elements
+Group     5 (      MainChain) has  1005 elements
+Group     6 (   MainChain+Cb) has  1005 elements
+Group     7 (    MainChain+H) has  1005 elements
+Group     8 (      SideChain) has     0 elements
+Group     9 (    SideChain-H) has     0 elements
+Select a group: Reading frame       0 time    0.000   Reading frame       0 time 1000.000   
+Precision of traj.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+ ->  frame      0 time 1000.000      Reading frame       1 time 1001.000    ->  frame      1 time 1001.000      Reading frame       2 time 1002.000    ->  frame      2 time 1002.000      Reading frame       3 time 1003.000    ->  frame      3 time 1003.000      Reading frame       4 time 1004.000    ->  frame      4 time 1004.000      Reading frame       5 time 1005.000    ->  frame      5 time 1005.000      Reading frame       6 time 1006.000    ->  frame      6 time 1006.000      Reading frame       7 time 1007.000    ->  frame      7 time 1007.000      Reading frame       8 time 1008.000    ->  frame      8 time 1008.000      Reading frame       9 time 1009.000    ->  frame      9 time 1009.000      Reading frame      10 time 1010.000    ->  frame     10 time 1010.000      Reading frame      11 time 1011.000   Reading frame      12 time 1012.000   Reading frame      13 time 1013.000   Reading frame      14 time 1014.000   Reading frame      15 time 1015.000   Reading frame      16 time 1016.000   Reading frame      17 time 1017.000   Reading frame      18 time 1018.000   Reading frame      19 time 1019.000   Reading frame      20 time 1020.000    ->  frame     20 time 1020.000      Reading frame      30 time 1030.000    ->  frame     30 time 1030.000      Reading frame      40 time 1040.000    ->  frame     40 time 1040.000      Reading frame      50 time 1050.000    ->  frame     50 time 1050.000      Reading frame      60 time 1060.000    ->  frame     60 time 1060.000      Reading frame      70 time 1070.000    ->  frame     70 time 1070.000      Reading frame      80 time 1080.000    ->  frame     80 time 1080.000      Reading frame      90 time 1090.000    ->  frame     90 time 1090.000      Reading frame     100 time 1100.000    ->  frame    100 time 1100.000      Reading frame     110 time 1110.000    ->  frame    110 time 1110.000      Reading frame     120 time 1120.000    ->  frame    120 time 1120.000      Reading frame     130 time 1130.000    ->  frame    130 time 1130.000      Reading frame     140 time 1140.000    ->  frame    140 time 1140.000      Reading frame     150 time 1150.000    ->  frame    150 time 1150.000      Reading frame     160 time 1160.000    ->  frame    160 time 1160.000      Reading frame     170 time 1170.000    ->  frame    170 time 1170.000      Reading frame     180 time 1180.000    ->  frame    180 time 1180.000      Reading frame     190 time 1190.000    ->  frame    190 time 1190.000      Reading frame     200 time 1200.000    ->  frame    200 time 1200.000       ->  frame    210 time 1210.000       ->  frame    220 time 1220.000       ->  frame    230 time 1230.000       ->  frame    240 time 1240.000       ->  frame    250 time 1250.000       ->  frame    260 time 1260.000       ->  frame    270 time 1270.000       ->  frame    280 time 1280.000       ->  frame    290 time 1290.000      Reading frame     300 time 1300.000    ->  frame    300 time 1300.000       ->  frame    310 time 1310.000       ->  frame    320 time 1320.000       ->  frame    330 time 1330.000       ->  frame    340 time 1340.000       ->  frame    350 time 1350.000       ->  frame    360 time 1360.000       ->  frame    370 time 1370.000       ->  frame    380 time 1380.000       ->  frame    390 time 1390.000      Reading frame     400 time 1400.000    ->  frame    400 time 1400.000       ->  frame    410 time 1410.000       ->  frame    420 time 1420.000       ->  frame    430 time 1430.000       ->  frame    440 time 1440.000       ->  frame    450 time 1450.000       ->  frame    460 time 1460.000       ->  frame    470 time 1470.000       ->  frame    480 time 1480.000       ->  frame    490 time 1490.000      Reading frame     500 time 1500.000    ->  frame    500 time 1500.000       ->  frame    510 time 1510.000       ->  frame    520 time 1520.000       ->  frame    530 time 1530.000       ->  frame    540 time 1540.000       ->  frame    550 time 1550.000       ->  frame    560 time 1560.000       ->  frame    570 time 1570.000       ->  frame    580 time 1580.000       ->  frame    590 time 1590.000      Reading frame     600 time 1600.000    ->  frame    600 time 1600.000       ->  frame    610 time 1610.000       ->  frame    620 time 1620.000       ->  frame    630 time 1630.000       ->  frame    640 time 1640.000       ->  frame    650 time 1650.000       ->  frame    660 time 1660.000       ->  frame    670 time 1670.000       ->  frame    680 time 1680.000       ->  frame    690 time 1690.000      Reading frame     700 time 1700.000    ->  frame    700 time 1700.000       ->  frame    710 time 1710.000       ->  frame    720 time 1720.000       ->  frame    730 time 1730.000       ->  frame    740 time 1740.000       ->  frame    750 time 1750.000       ->  frame    760 time 1760.000       ->  frame    770 time 1770.000       ->  frame    780 time 1780.000       ->  frame    790 time 1790.000      Reading frame     800 time 1800.000    ->  frame    800 time 1800.000       ->  frame    810 time 1810.000       ->  frame    820 time 1820.000       ->  frame    830 time 1830.000       ->  frame    840 time 1840.000       ->  frame    850 time 1850.000       ->  frame    860 time 1860.000       ->  frame    870 time 1870.000       ->  frame    880 time 1880.000       ->  frame    890 time 1890.000      Reading frame     900 time 1900.000    ->  frame    900 time 1900.000       ->  frame    910 time 1910.000       ->  frame    920 time 1920.000       ->  frame    930 time 1930.000       ->  frame    940 time 1940.000       ->  frame    950 time 1950.000       ->  frame    960 time 1960.000       ->  frame    970 time 1970.000       ->  frame    980 time 1980.000       ->  frame    990 time 1990.000      Reading frame    1000 time 2000.000    ->  frame   1000 time 2000.000       ->  frame   1010 time 2010.000       ->  frame   1020 time 2020.000       ->  frame   1030 time 2030.000       ->  frame   1040 time 2040.000       ->  frame   1050 time 2050.000       ->  frame   1060 time 2060.000       ->  frame   1070 time 2070.000       ->  frame   1080 time 2080.000       ->  frame   1090 time 2090.000      Reading frame    1100 time 2100.000    ->  frame   1100 time 2100.000       ->  frame   1110 time 2110.000       ->  frame   1120 time 2120.000       ->  frame   1130 time 2130.000       ->  frame   1140 time 2140.000       ->  frame   1150 time 2150.000       ->  frame   1160 time 2160.000       ->  frame   1170 time 2170.000       ->  frame   1180 time 2180.000       ->  frame   1190 time 2190.000      Reading frame    1200 time 2200.000    ->  frame   1200 time 2200.000       ->  frame   1210 time 2210.000       ->  frame   1220 time 2220.000       ->  frame   1230 time 2230.000       ->  frame   1240 time 2240.000       ->  frame   1250 time 2250.000       ->  frame   1260 time 2260.000       ->  frame   1270 time 2270.000       ->  frame   1280 time 2280.000       ->  frame   1290 time 2290.000      Reading frame    1300 time 2300.000    ->  frame   1300 time 2300.000       ->  frame   1310 time 2310.000       ->  frame   1320 time 2320.000       ->  frame   1330 time 2330.000       ->  frame   1340 time 2340.000       ->  frame   1350 time 2350.000       ->  frame   1360 time 2360.000       ->  frame   1370 time 2370.000       ->  frame   1380 time 2380.000       ->  frame   1390 time 2390.000      Reading frame    1400 time 2400.000    ->  frame   1400 time 2400.000       ->  frame   1410 time 2410.000       ->  frame   1420 time 2420.000       ->  frame   1430 time 2430.000       ->  frame   1440 time 2440.000       ->  frame   1450 time 2450.000       ->  frame   1460 time 2460.000       ->  frame   1470 time 2470.000       ->  frame   1480 time 2480.000       ->  frame   1490 time 2490.000      Reading frame    1500 time 2500.000    ->  frame   1500 time 2500.000      Last frame       1500 time 2500.000   
+
+
+gcq#103: "Take Your Medications and Preparations and Ram It Up Your Snout" (F. Zappa)
+

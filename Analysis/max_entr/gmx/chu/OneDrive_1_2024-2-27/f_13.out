@@ -1,0 +1,88 @@
+rm: cannot remove ‘/data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/Probability/Filelist*’: No such file or directory
+octave: unable to open X11 DISPLAY
+octave: disabling GUI features
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/0/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/1/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/2/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/3/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/4/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/5/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/6/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/7/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/8/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/9/f.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/0/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/1/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/2/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/3/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/4/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/5/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/6/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/7/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/8/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/9/Probability.dat
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/0/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/1/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/2/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/3/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/4/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/5/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/6/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/7/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/8/B.bin
+file = /data02/xchu/BCell_SmallSegments/PC/RUN/ConstantT/a_13/120.28/9/B.bin
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+rm: cannot remove ‘tmp.pdb’: No such file or directory
+rm: cannot remove ‘#*’: No such file or directory
+/cm/local/apps/sge/var/spool/node055/job_scripts/377468: line 86: /data02/xchu/BCell_SmallSegments/PC/RUN/uij/TAD.x: No such file or directory
+octave: unable to open X11 DISPLAY
+octave: disabling GUI features
+b =
+
+  -0.0017679
+   1.0477084
+
+Rsq2 =  0.92426
+                                                                               
+                    1 |----------------------------------------------------|   
+                      |  +         +         +     GG  + G     GG+   ###   |   
+                      |                        GG G            G   ##      |   
+                      |                         G  GG G G    GG ###        |   
+                  0.8 |-+                  GG   G  GGGG    G  ##         +-|   
+                      |                     GG  GGGGGG GGG####             |   
+                      |                   G GGGGGGGGGGGG##                 |   
+                  0.6 |-+                 G G GGGGGGG###                 +-|   
+                      |                GG   GGGGGG### G                    |   
+                      |                GGGGGGGGG##GGG                      |   
+                      |          G  GGGGGGGGG###GGGG  G                    |   
+                  0.4 |-+        GGGGGGGGGG##GGGGGGGGG                   +-|   
+                      |         GGGGGGGG###GGGGGGGG                        |   
+                      |      GGGGGGGG###GGGGG GGGGGG                       |   
+                  0.2 |-+   G GGGGG##GGGGGGGG GGG                        +-|   
+                      |     GGGG###GGGGGG      GG                          |   
+                      |   GGGG##GGGGGG  GG                                 |   
+                      |  GG###GGGGGG                                       |   
+                    0 |-+##GGG     +         +         +         +       +-|   
+                      |----------------------------------------------------|   
+                         0        0.2       0.4       0.6       0.8        1   
+                                        Probability (Sim)                      
+                                                                               
+octave: unable to open X11 DISPLAY
+octave: disabling GUI features

@@ -1,0 +1,176 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                               Grunge ROck MAChoS
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                              :-)  trjcat_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f       tmp0.xtc  Input, Mult. Trajectory: xtc trr trj gro g96 pdb cpt
+  -o    trajout.xtc  Output, Mult. Trajectory: xtc trr trj gro g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+-demux     remd.xvg  Input, Opt.  xvgr/xmgr file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-b           time   -1      First time to use (ps)
+-e           time   -1      Last time to use (ps)
+-dt          time   0       Only write frame when t MOD dt = first time (ps)
+-prec        int    3       Precision for .xtc and .gro writing in number of
+                            decimal places
+-[no]vel     bool   yes     Read and write velocities if possible
+-[no]settime bool   no      Change starting time interactively
+-[no]sort    bool   yes     Sort trajectory files (not frames)
+-[no]keeplast  bool no      Keep overlapping frames at end of trajectory
+-[no]overwrite bool no      Overwrite overlapping frames during appending
+-[no]cat     bool   yes     Do not discard double time frames
+
+Reading frame       0 time  500.000   Reading frame       1 time  501.000   
+
+Summary of files and start times used:
+
+          File                Start time       Time step
+---------------------------------------------------------
+                 tmp0.xtc      500.000 ps        1.000 ps
+
+Reading frame       0 time  500.000   
+Continue writing frames from tmp0.xtc t=500 ps, frame=0      
+ ->  frame      0 time  500.000 ps     Reading frame       1 time  501.000    ->  frame      1 time  501.000 ps     Reading frame       2 time  502.000    ->  frame      2 time  502.000 ps     Reading frame       3 time  503.000    ->  frame      3 time  503.000 ps     Reading frame       4 time  504.000    ->  frame      4 time  504.000 ps     Reading frame       5 time  505.000    ->  frame      5 time  505.000 ps     Reading frame       6 time  506.000    ->  frame      6 time  506.000 ps     Reading frame       7 time  507.000    ->  frame      7 time  507.000 ps     Reading frame       8 time  508.000    ->  frame      8 time  508.000 ps     Reading frame       9 time  509.000    ->  frame      9 time  509.000 ps     Reading frame      10 time  510.000    ->  frame     10 time  510.000 ps     Reading frame      11 time  511.000   Reading frame      12 time  512.000   Reading frame      13 time  513.000   Reading frame      14 time  514.000   Reading frame      15 time  515.000   Reading frame      16 time  516.000   Reading frame      17 time  517.000   Reading frame      18 time  518.000   Reading frame      19 time  519.000   Reading frame      20 time  520.000    ->  frame     20 time  520.000 ps     Reading frame      30 time  530.000    ->  frame     30 time  530.000 ps     Reading frame      40 time  540.000    ->  frame     40 time  540.000 ps     Reading frame      50 time  550.000    ->  frame     50 time  550.000 ps     Reading frame      60 time  560.000    ->  frame     60 time  560.000 ps     Reading frame      70 time  570.000    ->  frame     70 time  570.000 ps     Reading frame      80 time  580.000    ->  frame     80 time  580.000 ps     Reading frame      90 time  590.000    ->  frame     90 time  590.000 ps     Reading frame     100 time  600.000    ->  frame    100 time  600.000 ps     Reading frame     110 time  610.000    ->  frame    110 time  610.000 ps     Reading frame     120 time  620.000    ->  frame    120 time  620.000 ps     Reading frame     130 time  630.000    ->  frame    130 time  630.000 ps     Reading frame     140 time  640.000    ->  frame    140 time  640.000 ps     Reading frame     150 time  650.000    ->  frame    150 time  650.000 ps     Reading frame     160 time  660.000    ->  frame    160 time  660.000 ps     Reading frame     170 time  670.000    ->  frame    170 time  670.000 ps     Reading frame     180 time  680.000    ->  frame    180 time  680.000 ps     Reading frame     190 time  690.000    ->  frame    190 time  690.000 ps     Reading frame     200 time  700.000    ->  frame    200 time  700.000 ps      ->  frame    210 time  710.000 ps      ->  frame    220 time  720.000 ps      ->  frame    230 time  730.000 ps      ->  frame    240 time  740.000 ps      ->  frame    250 time  750.000 ps      ->  frame    260 time  760.000 ps      ->  frame    270 time  770.000 ps      ->  frame    280 time  780.000 ps      ->  frame    290 time  790.000 ps     Reading frame     300 time  800.000    ->  frame    300 time  800.000 ps      ->  frame    310 time  810.000 ps      ->  frame    320 time  820.000 ps      ->  frame    330 time  830.000 ps      ->  frame    340 time  840.000 ps      ->  frame    350 time  850.000 ps      ->  frame    360 time  860.000 ps      ->  frame    370 time  870.000 ps      ->  frame    380 time  880.000 ps      ->  frame    390 time  890.000 ps     Reading frame     400 time  900.000    ->  frame    400 time  900.000 ps      ->  frame    410 time  910.000 ps      ->  frame    420 time  920.000 ps      ->  frame    430 time  930.000 ps      ->  frame    440 time  940.000 ps      ->  frame    450 time  950.000 ps      ->  frame    460 time  960.000 ps      ->  frame    470 time  970.000 ps      ->  frame    480 time  980.000 ps      ->  frame    490 time  990.000 ps     Reading frame     500 time 1000.000    ->  frame    500 time 1000.000 ps     Last frame        500 time 1000.000   
+
+Last frame written was 500, time 1000.000000 ps
+
+gcq#330: "Jede der Scherben spiegelt das Licht" (Wir sind Helden)
+
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                Gravel Rubs Often Many Awfully Cauterized Sores
+
+                            :-)  VERSION 4.5.7  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                             :-)  trjconv_mpi  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f    trajout.xtc  Input        Trajectory: xtc trr trj gro g96 pdb cpt
+  -o        tmp.pdb  Output       Trajectory: xtc trr trj gro g96 pdb
+  -s /hpc2hdd/home/chu-amat/cbfengphy/chu/TOP_ME/Polymer_577_0.4.pdb  Input,
+                                   Opt!  Structure+mass(db): tpr tpb tpa gro
+                                   g96 pdb
+  -n      index.ndx  Input, Opt.  Index file
+ -fr     frames.ndx  Input, Opt.  Index file
+-sub    cluster.ndx  Input, Opt.  Index file
+-drop      drop.xvg  Input, Opt.  xvgr/xmgr file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    19      Set the nicelevel
+-b           time   0       First frame (ps) to read from trajectory
+-e           time   0       Last frame (ps) to read from trajectory
+-tu          enum   ps      Time unit: fs, ps, ns, us, ms or s
+-[no]w       bool   no      View output .xvg, .xpm, .eps and .pdb files
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-skip        int    1       Only write every nr-th frame
+-dt          time   0       Only write frame when t MOD dt = first time (ps)
+-[no]round   bool   no      Round measurements to nearest picosecond
+-dump        time   -1      Dump frame nearest specified time (ps)
+-t0          time   0       Starting time (ps) (default: don't change)
+-timestep    time   0       Change time step between input frames (ps)
+-pbc         enum   none    PBC treatment (see help text for full
+                            description): none, mol, res, atom, nojump,
+                            cluster or whole
+-ur          enum   rect    Unit-cell representation: rect, tric or compact
+-[no]center  bool   no      Center atoms in box
+-boxcenter   enum   tric    Center for -pbc and -center: tric, rect or zero
+-box         vector 0 0 0   Size for new cubic box (default: read from input)
+-clustercenter vector 0 0 0   Optional starting point for pbc cluster option
+-trans       vector 0 0 0   All coordinates will be translated by trans. This
+                            can advantageously be combined with -pbc mol -ur
+                            compact.
+-shift       vector 0 0 0   All coordinates will be shifted by framenr*shift
+-fit         enum   none    Fit molecule to ref structure in the structure
+                            file: none, rot+trans, rotxy+transxy,
+                            translation, transxy or progressive
+-ndec        int    3       Precision for .xtc and .gro writing in number of
+                            decimal places
+-[no]vel     bool   yes     Read and write velocities if possible
+-[no]force   bool   no      Read and write forces if possible
+-trunc       time   -1      Truncate input trajectory file after this time
+                            (ps)
+-exec        string         Execute command for every output frame with the
+                            frame number as argument
+-[no]app     bool   no      Append output
+-split       time   0       Start writing new file when t MOD split = first
+                            time (ps)
+-[no]sep     bool   no      Write each frame to a separate .gro, .g96 or .pdb
+                            file
+-nzero       int    0       If the -sep flag is set, use these many digits
+                            for the file numbers and prepend zeros as needed
+-dropunder   real   0       Drop all frames below this value
+-dropover    real   0       Drop all frames above this value
+-[no]conect  bool   no      Add conect records when writing .pdb files.
+                            Useful for visualization of non-standard
+                            molecules, e.g. coarse grained ones
+
+Will write pdb: Protein data bank file
+Group     0 (         System) has   577 elements
+Group     1 (        Protein) has   577 elements
+Group     2 (      Protein-H) has   577 elements
+Group     3 (        C-alpha) has   577 elements
+Group     4 (       Backbone) has   577 elements
+Group     5 (      MainChain) has   577 elements
+Group     6 (   MainChain+Cb) has   577 elements
+Group     7 (    MainChain+H) has   577 elements
+Group     8 (      SideChain) has     0 elements
+Group     9 (    SideChain-H) has     0 elements
+Select a group: Reading frame       0 time  500.000   
+Precision of trajout.xtc is 0.001 (nm)
+ ->  frame      0 time  500.000      Reading frame       1 time  501.000    ->  frame      1 time  501.000      Reading frame       2 time  502.000    ->  frame      2 time  502.000      Reading frame       3 time  503.000    ->  frame      3 time  503.000      Reading frame       4 time  504.000    ->  frame      4 time  504.000      Reading frame       5 time  505.000    ->  frame      5 time  505.000      Reading frame       6 time  506.000    ->  frame      6 time  506.000      Reading frame       7 time  507.000    ->  frame      7 time  507.000      Reading frame       8 time  508.000    ->  frame      8 time  508.000      Reading frame       9 time  509.000    ->  frame      9 time  509.000      Reading frame      10 time  510.000    ->  frame     10 time  510.000      Reading frame      11 time  511.000   Reading frame      12 time  512.000   Reading frame      13 time  513.000   Reading frame      14 time  514.000   Reading frame      15 time  515.000   Reading frame      16 time  516.000   Reading frame      17 time  517.000   Reading frame      18 time  518.000   Reading frame      19 time  519.000   Reading frame      20 time  520.000    ->  frame     20 time  520.000      Reading frame      30 time  530.000    ->  frame     30 time  530.000      Reading frame      40 time  540.000    ->  frame     40 time  540.000      Reading frame      50 time  550.000    ->  frame     50 time  550.000      Reading frame      60 time  560.000    ->  frame     60 time  560.000      Reading frame      70 time  570.000    ->  frame     70 time  570.000      Reading frame      80 time  580.000    ->  frame     80 time  580.000      Reading frame      90 time  590.000    ->  frame     90 time  590.000      Reading frame     100 time  600.000    ->  frame    100 time  600.000      Reading frame     110 time  610.000    ->  frame    110 time  610.000      Reading frame     120 time  620.000    ->  frame    120 time  620.000      Reading frame     130 time  630.000    ->  frame    130 time  630.000      Reading frame     140 time  640.000    ->  frame    140 time  640.000      Reading frame     150 time  650.000    ->  frame    150 time  650.000      Reading frame     160 time  660.000    ->  frame    160 time  660.000      Reading frame     170 time  670.000    ->  frame    170 time  670.000      Reading frame     180 time  680.000    ->  frame    180 time  680.000      Reading frame     190 time  690.000    ->  frame    190 time  690.000      Reading frame     200 time  700.000    ->  frame    200 time  700.000       ->  frame    210 time  710.000       ->  frame    220 time  720.000       ->  frame    230 time  730.000       ->  frame    240 time  740.000       ->  frame    250 time  750.000       ->  frame    260 time  760.000       ->  frame    270 time  770.000       ->  frame    280 time  780.000       ->  frame    290 time  790.000      Reading frame     300 time  800.000    ->  frame    300 time  800.000       ->  frame    310 time  810.000       ->  frame    320 time  820.000       ->  frame    330 time  830.000       ->  frame    340 time  840.000       ->  frame    350 time  850.000       ->  frame    360 time  860.000       ->  frame    370 time  870.000       ->  frame    380 time  880.000       ->  frame    390 time  890.000      Reading frame     400 time  900.000    ->  frame    400 time  900.000       ->  frame    410 time  910.000       ->  frame    420 time  920.000       ->  frame    430 time  930.000       ->  frame    440 time  940.000       ->  frame    450 time  950.000       ->  frame    460 time  960.000       ->  frame    470 time  970.000       ->  frame    480 time  980.000       ->  frame    490 time  990.000      Reading frame     500 time 1000.000    ->  frame    500 time 1000.000      Last frame        500 time 1000.000   
+
+
+gcq#330: "Jede der Scherben spiegelt das Licht" (Wir sind Helden)
+

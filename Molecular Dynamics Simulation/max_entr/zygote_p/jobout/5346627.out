@@ -1,0 +1,229 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 1 (23.2.0.2380103) 64-bit (glnxa64)
+                             September 11, 2023
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/0/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/1/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/2/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/3/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/4/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/5/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/6/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/7/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/8/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/9/f.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/0/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/1/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/2/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/3/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/4/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/5/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/6/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/7/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/8/Probability.dat'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/9/Probability.dat'
+
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 1 (23.2.0.2380103) 64-bit (glnxa64)
+                             September 11, 2023
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/0/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/1/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/2/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/3/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/4/B.bin'
+
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 1 (23.2.0.2380103) 64-bit (glnxa64)
+                             September 11, 2023
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/5/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/6/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/7/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/8/B.bin'
+
+
+file =
+
+    '/hpc2hdd/home/chu-amat/cbfengphy/gmx/zygote_p1/ConstantT/a_24/120.28/9/B.bin'
+
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 1 (23.2.0.2380103) 64-bit (glnxa64)
+                             September 11, 2023
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 1 (23.2.0.2380103) 64-bit (glnxa64)
+                             September 11, 2023
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+b =
+
+   -0.0016
+    0.8814
+
+
+Rsq2 =
+
+    0.9348
+
+[Warning: The figure is too large for the page and will be cut off. Resize the
+figure, adjust the output size by setting the figure's PaperPosition property,
+use the 'print' command with either the  '-bestfit' or '-fillpage' options, or
+use the 'Best fit' or 'Fill page' options on the 'Print Preview' window.] 
+[> In validate (line 146)
+In print (line 67)
+In Pcompare (line 58)
+In run (line 99)] 
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+             R2023b Update 1 (23.2.0.2380103) 64-bit (glnxa64)
+                             September 11, 2023
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
